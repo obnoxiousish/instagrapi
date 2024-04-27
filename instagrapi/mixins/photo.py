@@ -9,15 +9,15 @@ from uuid import uuid4
 
 import requests
 
-from instagrapi import config
-from instagrapi.exceptions import (
+from instagrapi.instagrapi import config
+from instagrapi.instagrapi.exceptions import (
     PhotoConfigureError,
     PhotoConfigureStoryError,
     PhotoNotUpload,
 )
-from instagrapi.extractors import extract_media_v1
-from instagrapi.image_util import prepare_image
-from instagrapi.types import (
+from instagrapi.instagrapi.extractors import extract_media_v1
+from instagrapi.instagrapi.image_util import prepare_image
+from instagrapi.instagrapi.types import (
     Location,
     Media,
     Story,
@@ -29,7 +29,7 @@ from instagrapi.types import (
     StorySticker,
     Usertag,
 )
-from instagrapi.utils import date_time_original, dumps
+from instagrapi.instagrapi.utils import date_time_original, dumps
 
 try:
     from PIL import Image

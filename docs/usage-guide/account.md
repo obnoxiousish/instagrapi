@@ -13,7 +13,7 @@ Viewing and managing your profile
 Example:
 
 ```python
->>> from instagrapi import Client
+>>> from instagrapi.instagrapi import Client
 >>> cl = Client()
 >>> cl.login(USERNAME, PASSWORD)
 >>> cl.account_info().dict()

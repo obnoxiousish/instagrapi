@@ -1,8 +1,8 @@
 You can handle any exceptions using a generic handler:
 
 ``` python
-from instagrapi import Client
-from instagrapi.exceptions import (
+from instagrapi.instagrapi import Client
+from instagrapi.instagrapi.exceptions import (
     BadPassword, ReloginAttemptExceeded, ChallengeRequired,
     SelectContactPointRecoveryForm, RecaptchaChallengeForm,
     FeedbackRequired, PleaseWaitFewMinutes, LoginRequired

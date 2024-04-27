@@ -96,7 +96,7 @@ dict_keys([5563084402, 43848984510, 1498977320, ...])
 Example: We go around the list of our followers and unfollow from them:
 
 ``` python
-from instagrapi import Client
+from instagrapi.instagrapi import Client
 cl = Client()
 cl.login(USERNAME, PASSWORD)
 

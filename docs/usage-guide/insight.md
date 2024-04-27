@@ -16,7 +16,7 @@ Get statistics by medias. Common arguments:
 Example:
 
 ``` python
-from instagrapi import Client
+from instagrapi.instagrapi import Client
 
 cl = Client()
 cl.login(USERNAME, PASSWORD)

@@ -10,10 +10,10 @@
 Example:
 
 ``` python
->>> note = cl.create_note("Hello from Instagrapi, everyone can see it!", 0)
+>>> note = cl.create_note("Hello from instagrapi.instagrapi, everyone can see it!", 0)
 >>> print(note.dict())
 {'id': '17849203563031468', 
-'text': 'Hello from Instagrapi, everyone can see it!', 
+'text': 'Hello from instagrapi.instagrapi, everyone can see it!', 
 'user_id': 12312312312, 
 'user': {
   'pk': '12312312312', 
@@ -31,7 +31,7 @@ Example:
 'note_style': 0}
 >>> notes = cl.get_notes()
 >>> print(notes)
-[Note(id='17849203563031468', text='Hello from Instagrapi, everyone can see it!', ..., has_translation=False, note_style=0), Note(id='17902958207826742', text='Am so happy 💃💃💃💃🙈🤭', ..., has_translation=False, note_style=0)]
+[Note(id='17849203563031468', text='Hello from instagrapi.instagrapi, everyone can see it!', ..., has_translation=False, note_style=0), Note(id='17902958207826742', text='Am so happy 💃💃💃💃🙈🤭', ..., has_translation=False, note_style=0)]
 
 >>> cl.last_seen_update_note()
 

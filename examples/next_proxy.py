@@ -8,8 +8,8 @@ import random
 from requests.exceptions import ProxyError
 from urllib3.exceptions import HTTPError
 
-from instagrapi import Client
-from instagrapi.exceptions import (
+from instagrapi.instagrapi import Client
+from instagrapi.instagrapi.exceptions import (
     ClientConnectionError,
     ClientForbiddenError,
     ClientLoginRequired,

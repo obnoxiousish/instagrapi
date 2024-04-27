@@ -9,16 +9,16 @@ from datetime import datetime, timedelta
 from json.decoder import JSONDecodeError
 from pathlib import Path
 
-from instagrapi import Client
-from instagrapi.utils import gen_password
-from instagrapi.exceptions import (
+from instagrapi.instagrapi import Client
+from instagrapi.instagrapi.utils import gen_password
+from instagrapi.instagrapi.exceptions import (
     BadCredentials,
     DirectThreadNotFound,
     ProxyAddressIsBlocked,
     BadPassword,
 )
-from instagrapi.story import StoryBuilder
-from instagrapi.types import (
+from instagrapi.instagrapi.story import StoryBuilder
+from instagrapi.instagrapi.types import (
     Account,
     Collection,
     Comment,
@@ -39,8 +39,8 @@ from instagrapi.types import (
     UserShort,
     Usertag,
 )
-from instagrapi.utils import generate_jazoest
-from instagrapi.zones import UTC
+from instagrapi.instagrapi.utils import generate_jazoest
+from instagrapi.instagrapi.zones import UTC
 
 logger = logging.getLogger("instagrapi.tests")
 ACCOUNT_USERNAME = os.getenv("IG_USERNAME", "username")
@@ -468,7 +468,7 @@ class ClientUserExtendTestCase(ClientPrivateTestCase):
         self.assertNotIn(user_id, following)
 
     # def test_send_new_note(self):
-    #     self.cl.create_note("Hello from Instagrapi!", 0)
+    #     self.cl.create_note("Hello from instagrapi.instagrapi!", 0)
 
 
 class ClientMediaTestCase(ClientPrivateTestCase):

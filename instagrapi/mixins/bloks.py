@@ -1,4 +1,4 @@
-from instagrapi.utils import dumps
+from instagrapi.instagrapi.utils import dumps
 
 
 class BloksMixin:

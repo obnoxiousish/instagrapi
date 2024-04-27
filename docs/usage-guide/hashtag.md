@@ -13,7 +13,7 @@ Viewing hashtag info and medias by hashtag
 Example:
 
 ``` python
->>> from instagrapi import Client
+>>> from instagrapi.instagrapi import Client
 
 >>> cl = Client()
 >>> cl.login(USERNAME, PASSWORD)

@@ -6,11 +6,11 @@ from pathlib import Path
 from typing import Dict, List
 from uuid import uuid4
 
-from instagrapi import config
-from instagrapi.exceptions import ClientError, IGTVConfigureError, IGTVNotUpload
-from instagrapi.extractors import extract_media_v1
-from instagrapi.types import Location, Media, Usertag
-from instagrapi.utils import date_time_original
+from instagrapi.instagrapi import config
+from instagrapi.instagrapi.exceptions import ClientError, IGTVConfigureError, IGTVNotUpload
+from instagrapi.instagrapi.extractors import extract_media_v1
+from instagrapi.instagrapi.types import Location, Media, Usertag
+from instagrapi.instagrapi.utils import date_time_original
 
 try:
     from PIL import Image

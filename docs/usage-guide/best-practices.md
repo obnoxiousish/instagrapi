@@ -21,7 +21,7 @@ From our experience, here are safe limits we've seen for various actions:
 We recommend using the [SOAX](https://soax.com/?r=sEysufQI) proxy service. Here's an example of using it with `instagrapi`
 
 ``` python
-from instagrapi import Client
+from instagrapi.instagrapi import Client
 
 cl = Client()
 before_ip = cl._send_public_request("https://api.ipify.org/")
@@ -40,7 +40,7 @@ between requests. The delays should be random and not too long.
 The following is a good example of how to add delays between requests.
 
 ``` python
-from instagrapi import Client
+from instagrapi.instagrapi import Client
 
 cl = Client()
 
@@ -63,7 +63,7 @@ To mimic this behavior, you can use the `.login()` method once to create a sessi
 The first time you run your script
 
 ``` python
-from instagrapi import Client
+from instagrapi.instagrapi import Client
 
 cl = Client()
 cl.login(USERNAME, PASSWORD)
@@ -73,7 +73,7 @@ cl.dump_settings("session.json")
 And the next time
 
 ``` python
-from instagrapi import Client
+from instagrapi.instagrapi import Client
 
 cl = Client()
 cl.load_settings("session.json")
@@ -86,8 +86,8 @@ You'll notice we do a call to `cl.get_timeline_feed()` to check if the session i
 Putting this all together, we could write a login function like this
 
 ``` python
-from instagrapi import Client
-from instagrapi.exceptions import LoginRequired
+from instagrapi.instagrapi import Client
+from instagrapi.instagrapi.exceptions import LoginRequired
 import logging
 
 logger = logging.getLogger()

@@ -74,7 +74,7 @@ pip install instagrapi
 ### Basic Usage
 
 ``` python
-from instagrapi import Client
+from instagrapi.instagrapi import Client
 
 cl = Client()
 cl.login(ACCOUNT_USERNAME, ACCOUNT_PASSWORD)
@@ -87,8 +87,8 @@ medias = cl.user_medias(user_id, 20)
     <summary>Additional example</summary>
 
 ```python
-from instagrapi import Client
-from instagrapi.types import StoryMention, StoryMedia, StoryLink, StoryHashtag
+from instagrapi.instagrapi import Client
+from instagrapi.instagrapi.types import StoryMention, StoryMedia, StoryLink, StoryHashtag
 
 cl = Client()
 cl.login(USERNAME, PASSWORD, verification_code="<2FA CODE HERE>")

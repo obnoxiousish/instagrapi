@@ -16,7 +16,7 @@ Viewing location info and medias by location
 Example:
 
 ``` python
->>> from instagrapi import Client
+>>> from instagrapi.instagrapi import Client
 
 >>> cl = Client()
 >>> cl.login(USERNAME, PASSWORD)

@@ -5,10 +5,10 @@ from urllib.parse import urlparse
 
 import requests
 
-from instagrapi.exceptions import ClientError, TrackNotFound
-from instagrapi.extractors import extract_track
-from instagrapi.types import Track
-from instagrapi.utils import json_value
+from instagrapi.instagrapi.exceptions import ClientError, TrackNotFound
+from instagrapi.instagrapi.extractors import extract_track
+from instagrapi.instagrapi.types import Track
+from instagrapi.instagrapi.utils import json_value
 
 
 class TrackMixin:

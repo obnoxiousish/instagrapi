@@ -1,5 +1,5 @@
-from instagrapi import Client
-from instagrapi.exceptions import (
+from instagrapi.instagrapi import Client
+from instagrapi.instagrapi.exceptions import (
     BadPassword,
     ChallengeRequired,
     FeedbackRequired,

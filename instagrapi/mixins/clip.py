@@ -6,11 +6,11 @@ from pathlib import Path
 from typing import Dict, List
 from uuid import uuid4
 
-from instagrapi import config
-from instagrapi.exceptions import ClientError, ClipConfigureError, ClipNotUpload
-from instagrapi.extractors import extract_media_v1
-from instagrapi.types import Location, Media, Track, Usertag
-from instagrapi.utils import date_time_original
+from instagrapi.instagrapi import config
+from instagrapi.instagrapi.exceptions import ClientError, ClipConfigureError, ClipNotUpload
+from instagrapi.instagrapi.extractors import extract_media_v1
+from instagrapi.instagrapi.types import Location, Media, Track, Usertag
+from instagrapi.instagrapi.utils import date_time_original
 
 try:
     from PIL import Image
@@ -232,9 +232,9 @@ class UploadClipMixin:
             A Media response from the call
         """
         tmpaudio = Path(tempfile.mktemp(".m4a"))
-        tmpaudio = self.track_download_by_url(track.uri, "track", tmpaudio.parent)
+        tmpaudio = self.track_download_by_url(track.get("uri", None), "track", tmpaudio.parent)
         try:
-            highlight_start_time = track.highlight_start_times_in_ms[0]
+            highlight_start_time = track.get('highlight_start_times_in_ms', None)[0]
         except IndexError:
             highlight_start_time = 0
         try:
@@ -269,29 +269,33 @@ class UploadClipMixin:
                 "song": {
                     "volume_level": 1.0,
                     "is_saved": "0",
-                    "artist_name": track.display_artist,
-                    "audio_asset_id": track.id,
-                    "audio_cluster_id": track.audio_cluster_id,
-                    "track_name": track.title,
+                    "artist_name": track.get('display_artist'),
+                    "audio_asset_id": track.get('id'),
+                    "audio_cluster_id": track.get('audio_cluster_id'),
+                    "track_name": track.get('title'),
                     "is_picked_precapture": "1",
                 },
             },
         )
         data["music_params"] = {
-            "audio_asset_id": track.id,
-            "audio_cluster_id": track.audio_cluster_id,
+            "audio_asset_id": track.get('id'),
+            "audio_cluster_id": track.get('audio_cluster_id'),
             "audio_asset_start_time_in_ms": highlight_start_time,
             "derived_content_start_time_in_ms": 0,
             "overlap_duration_in_ms": 15000,
             "product": "story_camera_clips_v2",
-            "song_name": track.title,
-            "artist_name": track.display_artist,
+            "song_name": track.get('title'),
+            "artist_name": track.get('display_artist'),
             "alacorn_session_id": "null",
         }
         clip_upload = self.clip_upload(tmpvideo, caption, extra_data=data)
         # remove the tmp files
-        tmpvideo.unlink()
-        tmpaudio.unlink()
+        try:
+            tmpvideo.unlink()
+            tmpaudio.unlink()
+        except PermissionError:
+            self.logger.warning("Could not remove tmp files")
+            
         return clip_upload
 
     def clip_configure(

@@ -61,8 +61,8 @@ In `extra_data`, you can pass additional story settings, for example:
 Examples:
 
 ``` python
-from instagrapi import Client
-from instagrapi.types import StoryMention, StoryMedia, StoryLink, StoryHashtag
+from instagrapi.instagrapi import Client
+from instagrapi.instagrapi.types import StoryMention, StoryMedia, StoryLink, StoryHashtag
 
 cl = Client()
 cl.login(USERNAME, PASSWORD)
@@ -95,8 +95,8 @@ If you want to format your story correctly (correct resolution, user mentions, e
 Example:
 
 ``` python
-from instagrapi.types import StoryMention, StoryMedia, StoryLink
-from instagrapi.story import StoryBuilder
+from instagrapi.instagrapi.types import StoryMention, StoryMedia, StoryLink
+from instagrapi.instagrapi.story import StoryBuilder
 
 media_pk = cl.media_pk_from_url('https://www.instagram.com/p/CGgDsi7JQdS/')
 media_path = cl.video_download(media_pk)

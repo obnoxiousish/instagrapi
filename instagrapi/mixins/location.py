@@ -2,13 +2,13 @@ import base64
 import json
 from typing import List, Tuple
 
-from instagrapi.exceptions import (
+from instagrapi.instagrapi.exceptions import (
     ClientNotFoundError,
     LocationNotFound,
     WrongCursorError,
 )
-from instagrapi.extractors import extract_guide_v1, extract_location, extract_media_v1
-from instagrapi.types import Guide, Location, Media
+from instagrapi.instagrapi.extractors import extract_guide_v1, extract_location, extract_media_v1
+from instagrapi.instagrapi.types import Guide, Location, Media
 
 tab_keys_a1 = ("edge_location_to_top_posts", "edge_location_to_media")
 tab_keys_v1 = ("ranked", "recent")

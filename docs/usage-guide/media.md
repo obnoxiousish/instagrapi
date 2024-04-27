@@ -66,7 +66,7 @@ Low level methods:
 ### Example:
 
 ``` python
->>> from instagrapi import Client
+>>> from instagrapi.instagrapi import Client
 >>> cl = Client()
 >>> cl.login(USERNAME, PASSWORD)
 
@@ -221,7 +221,7 @@ True
 
 ``` python
 
->>> from instagrapi import Client
+>>> from instagrapi.instagrapi import Client
 >>> cl = Client()
 >>> cl.login(USERNAME, PASSWORD)
 
@@ -277,7 +277,7 @@ In `extra_data`, you can pass additional media settings, for example:
 ### Example:
 
 ``` python
->>> from instagrapi import Client
+>>> from instagrapi.instagrapi import Client
 
 >>> cl = Client()
 >>> cl.login(USERNAME, PASSWORD)
@@ -321,8 +321,8 @@ In `extra_data`, you can pass additional media settings, for example:
 Now let's mention users (Usertag) and location:
 
 ``` python
->>> from instagrapi import Client
->>> from instagrapi.types import Usertag, Location
+>>> from instagrapi.instagrapi import Client
+>>> from instagrapi.instagrapi.types import Usertag, Location
 
 >>> cl = Client()
 >>> cl.login(USERNAME, PASSWORD)

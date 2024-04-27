@@ -4,8 +4,8 @@ import time
 from datetime import datetime
 from uuid import uuid4
 
-from instagrapi.extractors import extract_user_short
-from instagrapi.types import UserShort
+from instagrapi.instagrapi.extractors import extract_user_short
+from instagrapi.instagrapi.types import UserShort
 
 CHOICE_EMAIL = 1
 

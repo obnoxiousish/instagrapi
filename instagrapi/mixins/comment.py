@@ -1,9 +1,9 @@
 import random
 from typing import List, Optional, Tuple
 
-from instagrapi.exceptions import ClientError, ClientNotFoundError, MediaNotFound
-from instagrapi.extractors import extract_comment
-from instagrapi.types import Comment
+from instagrapi.instagrapi.exceptions import ClientError, ClientNotFoundError, MediaNotFound
+from instagrapi.instagrapi.extractors import extract_comment
+from instagrapi.instagrapi.types import Comment
 
 
 class CommentMixin:

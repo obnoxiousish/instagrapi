@@ -38,7 +38,7 @@ For any other languages (e.g. C++, C#, F#, D, [Golang](https://github.com/subzer
 ### Basic Usage
 
 ``` python
-from instagrapi import Client
+from instagrapi.instagrapi import Client
 
 cl = Client()
 cl.login(ACCOUNT_USERNAME, ACCOUNT_PASSWORD)
@@ -50,8 +50,8 @@ medias = cl.user_medias(user_id, 20)
 #### The full example
 
 ``` python
-from instagrapi import Client
-from instagrapi.types import StoryMention, StoryMedia, StoryLink, StoryHashtag
+from instagrapi.instagrapi import Client
+from instagrapi.instagrapi.types import StoryMention, StoryMedia, StoryLink, StoryHashtag
 
 cl = Client()
 cl.login(USERNAME, PASSWORD, verification_code="<2FA CODE HERE>")
